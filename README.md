@@ -1,4 +1,6 @@
 # portfolio
  Meu portfólio de programador para exposição de projetos.
-# deploy:
+# elaboração
+ Desenvolvido em HTML, CSS, JS e Bootstrap.
+# deploy
 https://marlon-brito.github.io/portfolio/
