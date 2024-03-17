@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Marlon Brito</title>
+    <!-- Bootstrap CSS: Estilização -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap Icons: Ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body id="corpo">
+    <!-- barra de navegação -->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top fundo--degrade">
+            <!-- container -->
+            <div class="container">
+                <!-- logo -->
+                <div class="text-center">
+                    <a href="./index.html" class="text-decoration-none">
+                        <span class="navbar-brand logo">Marlon Brito</span>
+                        <p class="small text-dark">Marlon Brito dos Santos Castor</p>
+                    </a>
+                </div>
+    
+                <!-- modos de tela com controle deslizante redondo -->
+                <div class="form-check form-switch display-6">
+                    <label class="form-check-label" for="modos--tela-ld">
+                        <input class="form-check-input bg-light" type="checkbox" role="switch" id="modos--tela-ld">
+                    </label>
+                </div>
+    
+                <!-- menu sanduíche (para smartphone) -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-links">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- menu de links -->
+                <div class="collapse navbar-collapse" id="menu-links">
+                    <!-- logo e link alinhados à esquerda -->
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                        <!-- Link home -->
+                        <li class="nav-item">
+                            <a href="#corpo" class="nav-link menu--link">Início</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a href="#contato" class="nav-link menu--link" data-bs-toggle="modal" data-bs-target="#sobre-modal">Sobre</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a href="#tecnologias" class="nav-link menu--link">Tecnologias</a>
+                        </li>
+    
+                        <ul class="d-flex list-unstyled align-items-center ms-1">
+                            <li>
+                                <a href="https://github.com/Marlon-Brito" target="_blank" class="text-dark text-decoration-none p-1">
+                                    <i class="bi bi-github icone"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/marlon-brito-663376296?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bj7bqbmseSbGv76Vk%2Bz%2BBtQ%3D%3D"  target="_blank" class="text-dark text-decoration-none p-1">
+                                    <i class="bi bi-linkedin icone"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/marlon_brito_drawings/?next=%2F" target="_blank" class="text-dark text-decoration-none p-1">
+                                    <i class="bi bi-instagram icone"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:blackreaper4399@gmail.com" target="_blank" class="text-dark text-decoration-none p-1">
+                                    <i class="bi bi-envelope icone"></i>
+                                </a>
+                            </li>
+                        </ul>
+    
+                    </ul> <!-- /navbar-nav -->
+                </div> <!-- /menu de links -->
+            </div>
+        </nav> <!-- /barra de navegação -->
+    </header>
+
+    <!-- Modal (sobre mim) - inclui fundo semitransparente -->
+    <div class="modal fade" id="sobre-modal" tabindex="-1" data-backdrop="static">
+
+        <!-- caixa de diálogo -->
+        <div class="modal-dialog">
+
+            <!-- conteúdo do modal -->
+            <div class="modal-content">
+
+                <!-- cabeçalho do modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titulo-modal">Olá, eu sou o <strong>Marlon</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- botão fechar: x -->
+                </div>
+
+                <!-- corpo do modal -->
+                <div class="modal-body text-center">
+                    <!-- Vinculando figura a uma legenda -->
+                    <figure class="figure p-4">
+                        <img src="./imgs/imgM.jpeg" alt="Marlon Brito" class="w-50">
+                        <figcaption class="figure-caption">
+                            Estudante e desenvolvedor front-end
+                        </figcaption>
+                        <!-- Descrição -->
+                        <p class="mt-3">Desde pequeno gosto de arte e me procuravam pra resolver questões envolvidas com ela, então descobri o mundo da programação onde posso resolver problemas atrelados a interfaces web, o que é muito satisfatório e me impulsiona a aprender cada vez mais sobre tecnologia!</p>
+                    </figure>
+                </div>
+
+                <!-- rodapé do modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mx-auto" data-bs-dismiss="modal">Fechar</button> <!-- botão fechar -->
+                </div>
+
+            </div> <!-- /modal-content -->
+        </div> <!-- /modal-dialog -->
+    </div> <!-- /modal -->
+
+    <!-- conteúdo principal -->
+    <main>
+        <div class="container d-flex flex-wrap justify-content-center conteudo">
+            <h1 class="container text-center w-100 mt-5 fundo--degrade p-1">Meus projetos</h1>
+    
+            <!-- Card Projeto Otakeros -->
+            <div class="card col-md-5 col-sm-12 m-3">
+    
+                <!-- Imagem no topo -->
+                <img src="./imgs/otakeros-tela-inicial.png" alt="..." class="card-img-top">
+    
+                <!-- Corpo do card -->
+                <div class="card-body">
+                    <!-- Título -->
+                    <h4 class="card-title text-center"><strong>Otakeros</strong></h4>
+    
+                    <!-- Texto complementar -->
+                    <p class="card-text text-center">
+                        Otakeros é um site e também comunidade online cuja mídia se baseia na transmissão de vídeo, tendo como foco principal os animes, animação japonesa ou, especificamente, à animação produzida no Japão. Desenvolvido em <strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>, <strong>PHP</strong> e <strong>MySQL</strong>.
+                    </p>
+    
+                    <!-- Link de acesso -->
+                    <a href="https://otakeros-oficial.000webhostapp.com/" target="_blank" class="btn btn-success d-grid mt-1">Deploy</a>
+                    <a href="https://github.com/Marlon-Brito/otakeros.git" target="_blank" class="btn btn-danger d-grid mt-1">Repositório</a>
+                </div>
+                <!-- /Fim do Corpo do card -->
+    
+            </div>
+            <!-- /Fim do card -->
+    
+            <!-- Card Projeto Hashtaurante -->
+            <div class="card col-md-5 col-sm-12  m-3">
+    
+                <!-- Imagem no topo -->
+                <img src="./imgs/cardapiodigital-tela-inicial.png" alt="..." class="card-img-top">
+    
+                <!-- Corpo do card -->
+                <div class="card-body">
+                    <!-- Título -->
+                    <h4 class="card-title text-center"><strong>Hashtaurante</strong></h4>
+    
+                    <!-- Texto complementar -->
+                    <p class="card-text text-center">
+                        Hashtaurante é um site feito no Intensivão de JS da Hashtag Treinamentos, elaborado no formato SPA (Single Page Application), cuja funcionalidades estão centradas numa única página. Fazendo um cardápio digital e adaptável sem a necessidade de atualizar a página, aumentando a interatividade com os usuários.  Desenvolvido em <strong>React</strong> com <strong>Vite</strong>.
+                    </p>
+    
+                    <!-- Link de acesso -->
+                    <a href="https://marlon-brito.github.io/hashtaurante/" target="_blank" class="btn btn-success d-grid mt-1">Deploy</a>
+                    <a href="https://github.com/Marlon-Brito/hashtaurante.git" target="_blank" class="btn btn-danger d-grid mt-1">Repositório</a>
+                </div>
+                <!-- /Fim do Corpo do card -->
+    
+            </div>
+            <!-- /Fim do card -->
+    
+            <!-- Card Projeto Audiobook -->
+            <div class="card col-md-5 col-sm-12 m-3">
+    
+                <!-- Imagem no topo -->
+                <img src="./imgs/audiobook-tela-inicial.png" alt="Audiobook" class="card-img-top">
+    
+                <!-- Corpo do card -->
+                <div class="card-body">
+                    <!-- Título -->
+                    <h4 class="card-title text-center"><strong>Audiobook</strong></h4>
+    
+                    <!-- Texto complementar -->
+                    <p class="card-text text-center">
+                        Audiobook é um site feito no Intensivão de JS da Hashtag Treinamentos, sendo um tocador de aúdios da obra de Machado de Assis, "Dom Casmurro", focado na lógica JS. Desenvolvido em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JS</strong>.
+                    </p>
+    
+                    <!-- Link de acesso -->
+                    <a href="https://marlon-brito.github.io/audiobook/" target="_blank" class="btn btn-success d-grid mt-1">Deploy</a>
+                    <a href="https://github.com/Marlon-Brito/audiobook.git" target="_blank" class="btn btn-danger d-grid mt-1">Repositório</a>
+                </div>
+                <!-- /Fim do Corpo do card -->
+    
+            </div>
+            <!-- /Fim do card -->
+    
+            <!-- Card Projeto Musicdot -->
+            <div class="card col-md-5 col-sm-12 m-3">
+    
+                <!-- Imagem no topo -->
+                <img src="./imgs/musicdot-tela-inicial.png" alt="Musicdot" class="card-img-top">
+    
+                <!-- Corpo do card -->
+                <div class="card-body">
+                    <!-- Título -->
+                    <h4 class="card-title text-center"><strong>Musicdot</strong></h4>
+    
+                    <!-- Texto complementar -->
+                    <p class="card-text text-center">
+                        Musicdot é um site feito num curso gratuito da Alura de HTML, CSS e JS. Aplicando os conceitos dessas tecnologias na criação de uma plataforma de música online, ensinando através de vídeo aulas. Desenvolvido em <strong>HTML</strong> e <strong>CSS</strong>.
+                    </p>
+    
+                    <!-- Link de acesso -->
+                    <a href="https://main--projeto-musicdot.netlify.app/" target="_blank" class="btn btn-success d-grid mt-1">Deploy</a>
+                    <a href="https://github.com/Marlon-Brito/musicdot.git" target="_blank" class="btn btn-danger d-grid mt-1">Repositório</a>
+                </div>
+                <!-- /Fim do Corpo do card -->
+    
+            </div>
+            <!-- /Fim do card -->
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div id="tecnologias" class="mt-5">
+            <h2 class="text-center p-1 fundo--degrade">Tecnologias</h2>
+            <div class="container text-center p-5">
+                <img src="./icones/html-5.png" alt="HTML5" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="HTML">
+    
+                <img src="./icones/css-3.png" alt="CSS3" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="CSS">
+    
+                <img src="./icones/js.png" alt="JS" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="JS">
+    
+                <img src="./icones/react.png" alt="React" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="React">
+    
+                <img src="./icones/git.png" alt="Git" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Git">
+    
+                <img src="./icones/github.png" alt="GitHub" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="GitHub">
+    
+                <img src="./icones/mysql.png" alt="MySQL" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="MySQL">
+    
+                <img src="./icones/bootstrap.png" alt="Bootstrap" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bootstrap">
+    
+                <img src="./icones/php.png" alt="PHP" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="PHP">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS: Para menus suspensos, popovers ou dicas de ferramentas... -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="./script.js"></script>
+</body>
+</html>
