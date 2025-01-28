@@ -1,6 +1,6 @@
-# 🚀 Portfólio
+# 🚀 Portfólio 2.0
 
-Uma breve descrição do projeto e sua finalidade.
+Esta é a versão 2.0 do meu portfólio de programador para expor estudos, trabalhos e projetos.
 
 ## 🛠️ Tecnologias Utilizadas
 
