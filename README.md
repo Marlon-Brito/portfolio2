@@ -20,7 +20,7 @@ Esta é a versão 2.0 do meu portfólio de programador para expor estudos, traba
    cd projeto
 
 ## 🚀 Como usar
-   Rode o arquivo index.html em qualquer navegador.
+   Rode o arquivo **index.html** em qualquer navegador para ver a execução do projeto.
 
 ## 🖥️ Deploy
 [Clique aqui para ver a implementação do site](https://marlon-brito.github.io/portfolio2/).
