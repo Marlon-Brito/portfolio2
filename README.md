@@ -24,3 +24,4 @@ Esta é a versão 2.0 do meu portfólio de programador para expor estudos, traba
 
 ## 🖥️ Deploy
    https://marlon-brito.github.io/portfolio2/
+    [Clique aqui para ver a implementação do site.](https://marlon-brito.github.io/portfolio2/)
