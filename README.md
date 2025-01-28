@@ -23,5 +23,4 @@ Esta é a versão 2.0 do meu portfólio de programador para expor estudos, traba
    Rode o arquivo index.html em qualquer navegador.
 
 ## 🖥️ Deploy
-   https://marlon-brito.github.io/portfolio2/
-    [Clique aqui para ver a implementação do site.](https://marlon-brito.github.io/portfolio2/)
+[Clique aqui para ver a implementação do site](https://marlon-brito.github.io/portfolio2/).
