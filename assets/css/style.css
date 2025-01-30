@@ -91,6 +91,7 @@ footer{
 .logo{
     font-family: Blackword;
     font-size: 2em;
+    user-select: none;
 }
 
 /* Filtro para inverter a cor de uma logo/imagens */
