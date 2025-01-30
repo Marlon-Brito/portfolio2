@@ -95,7 +95,7 @@ footer{
 
 /* Filtro para inverter a cor de uma logo/imagens */
 html[data-theme='dark'] .logo {
-    filter: invert(1);
+    filter: invert(1) !important;
 }
 
 nav{
