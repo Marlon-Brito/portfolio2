@@ -1,13 +1,28 @@
-/* Reset CSS */
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
+/* Fontes */
+@font-face {
+    font-family: Blackword;
+    src: local(Blacksword), url(../font/Blacksword.otf);
 }
 
-/* Referência a raiz do projeto, tag html ou body. Dentro se tem as variáveis que começam com "--" que serão usadas */
-:root{
+/* Define variáveis css para serem usadas no doc */
+/* O root (raiz) basicamente referencia o html */
+/* Vai atribuir esses estilos ao tema dark */
+:root[data-theme='dark'] {
+    --primary-color: #f0f0f0;
+
+    --primary-bg-color: rgb(8, 8, 8);
+    --primary-bg-color-degrade: rgba(8, 8, 8, 0.815);
+    --secondary-bg-color: #1c1c1c;
+    --accordion-body-bg-color: #fff;
+
+    --border-color: #28292e;
+
+    --title-color: #000;
+    --text-color: #fff;
+    --accordion-body-text-color: #000;
+    --link-color: #9a9a9c;
+    --icon-color: #c7c8c9;
+
     --form-background: linear-gradient(
         180deg,
         rgb(8, 8, 8) 0%,
@@ -16,14 +31,42 @@
     );
 }
 
-/* Estilos gerais */
-@font-face {
-    font-family: Blackword;
-    src: local(Blacksword), url(../font/Blacksword.otf);
+/* Vai atribuir esses estilos ao tema light */
+:root[data-theme='light'] {
+    --primary-color: #0b0b0f;
+
+    --primary-bg-color: rgb(247, 247, 247);
+    --primary-bg-color-degrade: rgba(247, 247, 247, 0.815);
+    --secondary-bg-color: #757575;
+    --accordion-body-bg-color: #000;
+
+    --border-color: #c7c8c9;
+
+    --title-color: #fff;
+    --text-color: #000;
+    --accordion-body-text-color: #fff;
+    --link-color: #28292e;
+    --icon-color: #56575a;
+
+    --form-background: linear-gradient(
+        180deg,
+        rgb(247, 247, 247) 0%,
+        rgb(247, 247, 247) 50%,
+        rgba(247, 247, 247, 0.5) 100%
+    );
 }
 
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+/* Estilos gerais */
 body{
-    background-color: rgb(8, 8, 8);
+    background-color: var(--primary-bg-color);
 }
 
 .titulo{
@@ -50,21 +93,35 @@ footer{
     font-size: 2em;
 }
 
+/* Filtro para inverter a cor de uma logo/imagens */
+html[data-theme='dark'] .logo {
+    filter: invert(1);
+}
+
 nav{
-    background-color: rgb(8, 8, 8);
+    background-color: var(--primary-bg-color);
+}
+
+.cabecalho__toggle{
+    cursor: pointer;
+    color: #1f41fd; /* Cor quando está no modo escuro (lua) */
+}
+
+[data-theme="dark"] .cabecalho__toggle {
+    color: #FFA833; /* Cor quando está no modo claro (sol) */
 }
 
 .menu--link, .icone{
-    color: white;
+    color: var(--text-color);
     cursor: pointer;
 }
 
 .menu--link:hover, .icone:hover{
-    color: white;
+    color: var(--text-color);
 }
 
 .nav-item a{
-    background-image: linear-gradient(white, white);
+    background-image: linear-gradient(var(--text-color), var(--text-color));
     background-size: 0% 2px;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -104,16 +161,16 @@ nav{
     z-index: 1;
     top: 0;
     left: 0;
-    background-image: -webkit-linear-gradient(top, rgba(8, 8, 8) 2%,  rgba(8, 8, 8, 0.815),#1f40fd59, #00ffdd57); /*#1f40fd86, #00ffdd85*/
+    background-image: -webkit-linear-gradient(top, var(--primary-bg-color) 2%, var(--primary-bg-color-degrade),#1f40fd59, #00ffdd57);
 }
 
 .apresentacao{
     color: white;
     z-index: 2;
-    text-shadow: 1px 1px 2px black;
     font-size: 1em;
     margin-top: -80px;
     text-align: center;
+    text-shadow: 1px 1px 2px var(--title-color);
 }
 
 .apresentacao h1{
@@ -123,6 +180,7 @@ nav{
 
 .apresentacao p{
     font-size: 0.9em;
+    color: var(--text-color);
 }
 
 .apresentacao span{
@@ -136,8 +194,8 @@ nav{
 
 /* Seção Sobre */
 .sobre{
-    background-color: #1c1c1c;
-    color: white;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
 }
 
 .sobre div img{
@@ -165,26 +223,26 @@ nav{
 }
 
 .accordion-button {
-    background-color: rgb(8, 8, 8); 
-    color: white;
+    background-color: var(--primary-bg-color); 
+    color: var(--text-color);
     box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: rgb(8, 8, 8);
-    color: white;
+    background-color: var(--primary-bg-color); 
+    color: var(--text-color);
 }
 
 .accordion-body {
-    background-color: #f8f9fa;
-    color: #000000;
+    background-color: var(--accordion-body-bg-color);
+    color: var(--accordion-body-text-color);
 }
 
 /* Seção Projetos */
 .card{
-    background-color: rgb(8, 8, 8);
-    color: white;
-    border: 1px solid #FFA833;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    border: 2px solid #FFA833;
     padding: 10px;
     transition: scale 0.5s;
 }
@@ -199,8 +257,8 @@ nav{
 
 /* Seção Tecnologias */
 .tecnologias{
-    background-color: #1c1c1c;
-    color: white;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
 }
 
 .icone__tecnologias{
@@ -227,12 +285,12 @@ nav{
 }
 
 .contato p{
-    color: white;
+    color: var(--text-color);
 }
 
 .formulario{
     position: relative;
-    background-color: rgba(0, 0, 0);
+    background-color: var(--primary-bg-color);
     border-radius: 0.5rem;
     border: 2px solid #FFA833;
     max-width: 500px;
@@ -247,7 +305,7 @@ label{
 }
 
 .form-control{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-bg-color);
     border: 0;
     border-radius: 0;
     border-bottom: 2px solid #FFA833;
@@ -256,18 +314,18 @@ label{
 }
 
 .form-control:focus{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-bg-color);
     outline: none;
     box-shadow: 0 0 0 0;
     border-bottom: 2px solid #00ffdd;
-    color: white;
+    color: var(--text-color);
 }
 
 textarea{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-bg-color);
     border: 0;
     border-bottom: 2px solid #FFA833;
-    color: white;
+    color: var(--text-color);
     outline: none;
     transition: border 1s;
 }
@@ -277,14 +335,14 @@ textarea:focus{
 }
 
 .form-control::-webkit-input-placeholder, ::-webkit-input-placeholder {
-    color: white;
+    color: var(--text-color);
 }
 
 /* Rodapé */
 footer{
-    color: white;
+    color: var(--text-color);
     padding: 1rem;
-    background-color: #1c1c1c;
+    background-color: var(--primary-bg-color);
 }
 
 /* Estilos de esconder e mostrar do IntersectionObserver */

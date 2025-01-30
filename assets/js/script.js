@@ -1,3 +1,18 @@
+// Trocando de temas (dark e light)
+const toggleTheme = document.getElementById('toggleTheme');
+const rootHtml = document.documentElement;
+
+function changeTheme(){
+    const currentTheme = rootHtml.getAttribute('data-theme');
+
+    currentTheme === 'dark' ? rootHtml.setAttribute('data-theme', 'light') : rootHtml.setAttribute('data-theme', 'dark');
+
+    toggleTheme.classList.toggle('bi-sun');
+    toggleTheme.classList.toggle('bi-moon-stars');
+}
+
+toggleTheme.addEventListener('click', changeTheme);
+
 // Seleciona todos os tooltips (pequena mensagem que aparece ao interagir)
 let tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 
@@ -6,7 +21,8 @@ for (let i of tooltips){
     new bootstrap.Tooltip(i); // Ative-o
 }
 
-// Observando cada elemento escondido para revelá-lo quando o scroll o alcançar
+// IntersectionObserver é uma API do JavaScript que permite observar se um elemento está visível na tela
+// Verificando cada elemento escondido para revelá-lo quando o scroll o alcançar
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

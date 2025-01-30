@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark"> <!-- Definindo tema atual para depois poder alternar entre um e o outro -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,13 @@
             <div class="container">
                 <!-- logo -->
                 <a href="./index.html" class="text-decoration-none d-flex align-items-center">
-                    <span class="navbar-brand logo text-light">Marlon Brito</span>
+                    <span class="navbar-brand logo">Marlon Brito</span>
                 </a>
+
+                <!-- botão alternador de temas -->
+                <div class="cabecalho__toggle display-6 ms-3">
+                    <i class="bi bi-sun" id="toggleTheme"></i>
+                </div>
     
                 <!-- menu sanduíche (para smartphone) -->
                 <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#menu-links">
@@ -95,7 +100,7 @@
         </div>
 
         <!-- Seção Sobre -->
-        <section id="sobre" class="sobre p-3 my-5">
+        <section id="sobre" class="sobre p-3">
             <h2 class="titulo container text-center fundo--degrade mt-5 p-2">Sobre</h2>
 
             <div class="container d-flex flex-wrap justify-content-evenly align-items-center mt-5">
@@ -302,7 +307,7 @@
     
                     <!-- Texto complementar -->
                     <p class="card-text text-center">
-                        Spiderman Multiversos é um site feito no Bootcamp Front-end do Zero Ri Happy da DIO, sendo uma interface com muitas animações e interatividade homenageando o filme "Homem-Aranha: Sem Volta para Casa. Desenvolvido em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JS</strong>.
+                        Spiderman Multiversos é um site feito no Bootcamp Front-end do Zero Ri Happy da DIO, sendo uma interface com muitas animações e interatividade homenageando o filme "Homem-Aranha: Sem Volta para Casa". Desenvolvido em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JS</strong>.
                     </p>
     
                 </div>
@@ -343,7 +348,7 @@
         </section>
 
         <!-- Seção Tecnologias -->
-        <section id="tecnologias" class="tecnologias p-3 my-5">
+        <section id="tecnologias" class="tecnologias p-3 mt-5">
             <h2 class="titulo container text-center p-2 mt-5 fundo--degrade">Tecnologias</h2>
             <div class="container col-md-6 col-sm-12 text-center p-5 hidden">
                 <p>Conhecimento nas seguintes tecnologias:</p>
@@ -354,8 +359,8 @@
                 <img src="./assets/icones/css-3.png" alt="CSS3" class="icone__tecnologias m-3" 
                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="CSS">
     
-                <img src="./assets/icones/js.png" alt="JS" class="icone__tecnologias m-3" 
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="JS">
+                <img src="./assets/icones/js.png" alt="JavaScript" class="icone__tecnologias m-3" 
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="JavaScript">
     
                 <img src="./assets/icones/react.png" alt="React" class="icone__tecnologias m-3" 
                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="React">
@@ -379,7 +384,7 @@
 
         <!-- Seção Contato -->
         <section id="contato" class="contato d-flex flex-column justify-content-center align-items-center p-3">
-            <h2 class="titulo container text-center fundo--degrade p-2">Contato</h2>
+            <h2 class="titulo container text-center fundo--degrade p-2 mt-5">Contato</h2>
 
             <p class="text-center col-8 mt-5 hidden">Estou disponível para serviços e novas conexões. Contate-me via e-mail e conecte-se comigo através das minhas redes sociais.</p>
 
@@ -401,7 +406,7 @@
                 </li>
             </ul>
 
-            <form class="formulario col-md-5 p-3 mt-5 hidden" onsubmit="enviarEmail(event)">
+            <form class="formulario col-md-5 p-3 my-5 hidden" onsubmit="enviarEmail(event)">
                 <label for="nome">Nome </label>
                 <input type="text" class="form-control p-2" id="nome" placeholder="Digite seu nome"><!--col-md-5 col-sm-12-->
 
@@ -418,7 +423,7 @@
     </main>
 
     <!-- Rodapé -->
-    <footer class="text-center mt-5">
+    <footer class="text-center">
         <p>&copy; 2025. Todos os Direitos Reservados. Marlon Brito. Desenvolvido por MB.</p>
     </footer>
 
