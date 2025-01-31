@@ -17,7 +17,7 @@ Esta é a versão 2.0 do meu portfólio de programador para expor estudos, traba
 
 2. Acesse a pasta do projeto:
    ```bash
-   cd projeto
+   cd nome-projeto
 
 ## 🚀 Como usar
    Rode o arquivo **index.html** em qualquer navegador para ver a execução do projeto.
