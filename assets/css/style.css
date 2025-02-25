@@ -99,6 +99,10 @@ html[data-theme='dark'] .logo {
     filter: invert(1) !important;
 }
 
+html[data-theme='dark'] .navbar-toggler{
+    filter: invert(1) !important;
+}
+
 nav{
     background-color: var(--primary-bg-color);
 }
@@ -245,11 +249,11 @@ nav{
     color: var(--text-color);
     border: 2px solid #FFA833;
     padding: 10px;
-    transition: scale 0.5s;
+    transition: transform 0.1s ease-in-out;
 }
 
 .card:hover{
-    scale: 1.05;
+    transform: scale(1.05);
 }
 
 .card-title{
